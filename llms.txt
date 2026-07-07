@@ -1,0 +1,42 @@
+# Bitcoin Fácil
+
+> Site educativo em português sobre Bitcoin e a corretora Binance, voltado para o público brasileiro. Reúne cotação em tempo real, tutoriais em vídeo e conteúdo explicativo sobre como comprar, vender e entender o Bitcoin com segurança.
+
+Este site contém um link de indicação (afiliado) para a Binance nas páginas de call to action. O conteúdo é educativo e não constitui recomendação de investimento.
+
+## Cotação e gráficos
+
+- [Bitcoin hoje](https://bitcoin-facil.github.io/bitcoin-hoje/): cotação e gráfico do Bitcoin atualizados em tempo real.
+- [Cotação Bitcoin dólar](https://bitcoin-facil.github.io/cotacao-bitcoin-dolar/): preço do Bitcoin em dólar, referência internacional do mercado.
+- [1 Bitcoin em reais](https://bitcoin-facil.github.io/bitcoin-em-reais/): conversor mostrando quanto vale 1 Bitcoin em reais.
+- [Gráfico do Bitcoin agora](https://bitcoin-facil.github.io/grafico-bitcoin-agora/): gráfico de preço com explicação de como interpretar velas e tendências.
+
+## Como comprar e vender
+
+- [Como comprar Bitcoin com segurança](https://bitcoin-facil.github.io/como-comprar-bitcoin-com-seguranca/): guia geral em 5 passos, do cadastro ao saque.
+- [Como abrir conta na Binance](https://bitcoin-facil.github.io/como-abrir-conta-na-binance/): cadastro, verificação de identidade e configuração de segurança.
+- [Como comprar Bitcoin pelo Pix](https://bitcoin-facil.github.io/como-comprar-bitcoin-pelo-pix/): depósito via Pix e compra de Bitcoin.
+- [Como vender Bitcoin e sacar para a conta bancária](https://bitcoin-facil.github.io/como-vender-bitcoin-e-sacar-para-conta-bancaria/): venda de Bitcoin e saque via Pix.
+
+## Sobre a Binance
+
+- [Binance é confiável](https://bitcoin-facil.github.io/binance-e-confiavel/): histórico, segurança e pontos a considerar sobre a corretora.
+- [Binance é segura no Brasil](https://bitcoin-facil.github.io/binance-e-segura-no-brasil/): uso da Binance por brasileiros, Pix e considerações fiscais.
+- [Binance taxas e custos](https://bitcoin-facil.github.io/binance-taxas-e-custos/): taxas de negociação, depósito e saque.
+
+## Aprenda sobre Bitcoin
+
+- [O que é Bitcoin](https://bitcoin-facil.github.io/o-que-e-bitcoin/): explicação introdutória sobre o que é e como surgiu o Bitcoin.
+- [Como funciona a blockchain](https://bitcoin-facil.github.io/como-funciona-a-blockchain/): explicação da tecnologia por trás do Bitcoin.
+- [Bitcoin é seguro](https://bitcoin-facil.github.io/bitcoin-e-seguro/): segurança técnica do sistema versus risco de mercado.
+- [Vale a pena investir em Bitcoin](https://bitcoin-facil.github.io/vale-a-pena-investir-em-bitcoin/): pontos a considerar antes de investir, sem recomendação de investimento.
+
+## Institucional
+
+- [Sobre](https://bitcoin-facil.github.io/sobre/): apresentação do site e transparência sobre o programa de afiliados.
+- [Aviso legal](https://bitcoin-facil.github.io/aviso-legal/): natureza educativa do conteúdo e riscos do investimento em criptomoedas.
+- [Política de privacidade](https://bitcoin-facil.github.io/politica-de-privacidade/): uso de cookies e dados coletados via Google Analytics.
+
+## Vídeo tutorial
+
+Todas as páginas incluem o mesmo vídeo tutorial em formato vertical, mostrando o passo a passo completo: criar conta na Binance, verificar identidade, depositar via Pix, comprar Bitcoin, vender Bitcoin e sacar para a conta bancária.
