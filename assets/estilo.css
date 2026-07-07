@@ -1,4 +1,25 @@
-/* Bitcoin Fácil - estilo base do site */
+/* Bitcoin Fácil — identidade visual
+   Paleta inspirada em terminal de negociação: fundo quase preto, texto claro,
+   dourado como acento principal (mesma referência de cor usada em interfaces
+   de corretoras de cripto), verde para dados positivos.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap');
+
+:root {
+  --bg: #0b0e11;
+  --surface: #14181d;
+  --surface-2: #1c2127;
+  --border: #262b31;
+  --text: #eaecef;
+  --text-muted: #848e9c;
+  --ouro: #f0b90b;
+  --ouro-escuro: #cf9f09;
+  --verde: #02c076;
+  --fonte-display: "Space Grotesk", sans-serif;
+  --fonte-corpo: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --fonte-dados: "JetBrains Mono", monospace;
+}
 
 * {
   box-sizing: border-box;
@@ -6,14 +27,14 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  color: #1a1a1a;
-  background-color: #ffffff;
-  line-height: 1.6;
+  font-family: var(--fonte-corpo);
+  color: var(--text);
+  background-color: var(--bg);
+  line-height: 1.65;
 }
 
 a {
-  color: #f0b90b;
+  color: var(--ouro);
   text-decoration: none;
 }
 
@@ -21,78 +42,130 @@ a:hover {
   text-decoration: underline;
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--ouro);
+  outline-offset: 2px;
+}
+
 /* Header e menu */
 
 .site-header {
-  background-color: #1a1a1a;
-  padding: 16px 24px;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 18px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .menu-principal {
   display: flex;
   align-items: center;
-  gap: 24px;
-  max-width: 960px;
+  gap: 28px;
+  max-width: 880px;
   margin: 0 auto;
   flex-wrap: wrap;
 }
 
 .menu-principal .logo {
-  color: #ffffff;
+  font-family: var(--fonte-display);
+  color: var(--text);
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   margin-right: auto;
+  letter-spacing: -0.01em;
 }
 
-.menu-principal a {
-  color: #e6e6e6;
-  font-size: 0.95rem;
+.menu-principal .logo::before {
+  content: "₿ ";
+  color: var(--ouro);
 }
 
-.menu-principal a:hover {
-  color: #f0b90b;
+.menu-principal a:not(.logo) {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.menu-principal a:not(.logo):hover {
+  color: var(--ouro);
 }
 
 /* Conteúdo principal */
 
 main {
-  max-width: 800px;
+  max-width: 760px;
   margin: 0 auto;
-  padding: 32px 20px 60px 20px;
+  padding: 48px 20px 64px 20px;
 }
 
 h1 {
-  font-size: 1.8rem;
-  margin-bottom: 16px;
+  font-family: var(--fonte-display);
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+  color: var(--text);
 }
 
 h2 {
-  font-size: 1.4rem;
-  margin-top: 32px;
-  margin-bottom: 12px;
+  font-family: var(--fonte-display);
+  font-size: 1.3rem;
+  margin-top: 40px;
+  margin-bottom: 14px;
+  color: var(--text);
 }
 
 h3 {
-  font-size: 1.1rem;
-  margin-top: 20px;
+  font-family: var(--fonte-corpo);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 22px;
   margin-bottom: 8px;
+  color: var(--text);
 }
 
 p {
   margin-bottom: 16px;
+  color: var(--text);
+}
+
+.texto-abertura p,
+.texto-explicativo p {
+  color: #cfd3d8;
 }
 
 section {
-  margin-bottom: 32px;
+  margin-bottom: 36px;
 }
 
-/* Widget de cotação/gráfico */
+/* Widget de cotação/gráfico — moldura estilo terminal */
 
 .bloco-widget {
-  border: 1px solid #e6e6e6;
-  border-radius: 8px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background-color: var(--surface);
+  overflow: hidden;
+}
+
+.bloco-widget::before {
+  content: "● COTAÇÃO AO VIVO";
+  display: block;
+  font-family: var(--fonte-dados);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--verde);
+  background-color: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 14px;
+}
+
+.bloco-widget > div,
+.bloco-widget > iframe {
   padding: 12px;
-  background-color: #fafafa;
 }
 
 /* Bloco de vídeo */
@@ -101,89 +174,162 @@ section {
   text-align: center;
 }
 
+.bloco-video h2 {
+  text-align: left;
+}
+
 .video-wrapper {
   display: flex;
   justify-content: center;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
 }
 
 .video-wrapper iframe {
   max-width: 100%;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
 /* Bloco de CTA */
 
 .bloco-cta {
-  background-color: #fff8e1;
-  border: 1px solid #f0b90b;
-  border-radius: 8px;
-  padding: 20px;
+  background: linear-gradient(180deg, var(--surface) 0%, var(--surface-2) 100%);
+  border: 1px solid var(--ouro-escuro);
+  border-radius: 10px;
+  padding: 28px 24px;
   text-align: center;
+}
+
+.bloco-cta p {
+  color: var(--text);
 }
 
 .botao-cta {
   display: inline-block;
-  background-color: #f0b90b;
-  color: #1a1a1a;
+  background-color: var(--ouro);
+  color: #0b0e11;
+  font-family: var(--fonte-display);
   font-weight: 700;
-  padding: 12px 28px;
+  font-size: 1rem;
+  padding: 13px 32px;
   border-radius: 6px;
-  margin: 12px 0;
+  margin: 10px 0;
+  transition: background-color 0.15s ease;
 }
 
 .botao-cta:hover {
-  background-color: #d9a600;
+  background-color: #ffd23d;
   text-decoration: none;
 }
 
 .aviso-afiliado {
-  font-size: 0.8rem;
-  color: #666666;
+  font-family: var(--fonte-dados);
+  font-size: 0.72rem;
+  color: var(--text-muted);
   margin-bottom: 0;
+  letter-spacing: 0.01em;
 }
 
 /* FAQ */
 
+.bloco-faq {
+  border-top: 1px solid var(--border);
+  padding-top: 8px;
+}
+
 .faq-item {
-  border-bottom: 1px solid #e6e6e6;
-  padding-bottom: 12px;
-  margin-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+  margin-bottom: 0;
 }
 
 .faq-item h3 {
   margin-top: 0;
+  color: var(--ouro);
+  font-size: 1rem;
 }
 
 .faq-item p {
   margin-bottom: 0;
+  color: #cfd3d8;
 }
 
 /* Links relacionados e clusters da home */
 
 .links-relacionados ul,
 .secao-clusters ul {
-  padding-left: 20px;
+  list-style: none;
+  padding-left: 0;
 }
 
 .links-relacionados li,
 .secao-clusters li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  padding-left: 18px;
+  position: relative;
+}
+
+.links-relacionados li::before,
+.secao-clusters li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--ouro);
+  font-family: var(--fonte-dados);
+}
+
+.secao-clusters h2 {
+  border-top: 1px solid var(--border);
+  padding-top: 28px;
+}
+
+.secao-clusters h2:first-child {
+  border-top: none;
+  padding-top: 0;
 }
 
 /* Footer */
 
 .site-footer {
-  background-color: #1a1a1a;
-  color: #cccccc;
+  background-color: var(--bg);
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
   text-align: center;
-  padding: 24px 20px;
+  padding: 28px 20px;
   font-size: 0.85rem;
 }
 
 .site-footer a {
-  color: #f0b90b;
+  color: var(--ouro);
 }
 
 .site-footer .aviso-afiliado {
-  color: #999999;
+  color: #5c646d;
+  margin-top: 8px;
+}
+
+/* Responsivo */
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  main {
+    padding: 32px 16px 48px 16px;
+  }
+
+  .menu-principal {
+    gap: 16px;
+  }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
 }
