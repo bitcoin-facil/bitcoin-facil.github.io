@@ -52,6 +52,10 @@
     <loc>https://bitcoin-facil.github.io/binance-taxas-e-custos/</loc>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://bitcoin-facil.github.io/binance-ou-binenca/</loc>
+    <priority>0.6</priority>
+  </url>
 
   <url>
     <loc>https://bitcoin-facil.github.io/o-que-e-bitcoin/</loc>
